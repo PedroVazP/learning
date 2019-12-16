@@ -1,0 +1,6 @@
+Run:
+
+py -3 -i "$(FULL_CURRENT_PATH)"
+
+
+https://npp-user-manual.org/docs/programing-languages/
