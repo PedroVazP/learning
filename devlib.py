@@ -3,7 +3,7 @@
 import re
 import datetime #for timestamp
 
-class pvlib:
+class devlib:
 
     #https://docs.python.org/3/tutorial/classes.html 
             #_init_ defines some variables and initial values for the class )... self, args, instances, .... 
@@ -18,48 +18,24 @@ class pvlib:
     def b(self):
         return 'hello'
        
-    def hello():
-        print ("Hello world")
+    def c (self,a,b):
+        self_a = self.a
+        self_b = self.b
+        print ("Hello world",a)
+        print ("Hello world",b)
         return ("Hello world")    
-    
-    def store(string):
-        str(string)
-        file = "output.txt"
-        f=open(file,"a+")
-        f.write ("\n")
-        ts1 =('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()))
-        #ts2 =('Timestamp: {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now()))
-        #ts3 =('Date now: %s' % datetime.datetime.now())
-        #ts4 =('Date today: %s' % datetime.date.today())
-        f.write(ts1)
-        f.write ("\t")
-        f.write (string)
-        f.close()
-        print (f)
-       
-        """
-            To add: Pending to create an error check. Write vs create new.
-            if file = error
-            f= open(file,e"w+")
-        """
-
-    if __name__ == "__main__":
-        store("")
-
-X = pvlib()
+         
+x = devlib()
 
 a = ["apple", "pinaple"]
-pvlib.a
-pvlib.b(["a","b","c"])
+devlib.a
+devlib.b(["a"])
 
-
+x.a
+devlib.b("a")
+#x.c(0,1,2)
 
 #other notes
-
-    #How to test? : try pvlib.store("prueba"),
-    # How to break?, file did hundred "prueba"
-
-    #_init_ ?, Why do this works for? See BELOW. to research
     #https://stackoverflow.com/questions/448271/what-is-init-py-for
 
     #Open. Investigate How does Def_init_ WORKS
