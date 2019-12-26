@@ -19,7 +19,7 @@ class pvlib:
     def store(string):
         str(string)
         file = "output.txt"
-        f=open(file,"a+")
+        f = open(file,"a+")
         f.write ("\n")
         ts1 =('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()))
         #ts2 =('Timestamp: {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now()))
