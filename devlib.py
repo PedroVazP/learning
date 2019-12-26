@@ -8,39 +8,53 @@ class devlib:
     
     def __init__(self): # I get an error as self is not defined, but cant pass an argument. 
         self.data = []
-    
-    a = 12345 
-
+ 
     def b(self):
         return 'hello'  
          
-    def comp (m,n):
-        m = self.m
-        n = self.n
+    def c (self,m,n):
+        c = devlib.comp(self,m,n)
+        
+    def comp (self,m,n):
+        #m = self.m
+        #n = self.n
         if m>n :
-            print ("%s is greater than %s", (m,n)) 
+            print ("{} is greater than {}".format(m,n)) 
         elif n>m:
-            print ("%s is greater than %s", (n,m))
+            print ("{} is greater than {}".format(n,m))
+            #printing variables 
+            #https://stackoverflow.com/questions/9333245/python-printing-text-after-printing-a-variables
         else:
             print ("Error ;)")
         return ("Hello")
         
-    def c (self,x,y): #still trying to figure out how self works. cant get it running yet.
+    def d (self,x,y):
+        z = x + y
+        print (z)
+        return (z)
+    
+    def e (self,x,y): #still trying to figure out how self works. cant get it running yet.
+        #Traceback (most recent call last):
+            #File "<stdin>", line 1, in <module>
+            #File "C:\Users\Pedrosky\Documents\GitHub\learning\devlib.py", line 37, in e
+            #self_x = self.x
+            #AttributeError: 'devlib' object has no attribute 'x'
         self_x = self.x
         self_y = self.y
-        print ("Hello world %s",(a))
-        print ("Hello world %s",(b))
+        print ("Hello world {}".format(self_x))
+        print ("Hello world %s".format(self_y))
         return ("Hello world")    
-        
-x = devlib()
+    
+    
+xx = devlib()
 
 a = ["apple", "pinaple"]
-devlib.a
-devlib.b(["a"])
+#devlib.a
+#xx.a
 
-x.a
+devlib.b(["a"])
 devlib.b("a")
-#x.c(0,1,2)
+
 
 #other notes
     #https://docs.python.org/3/tutorial/classes.html 
