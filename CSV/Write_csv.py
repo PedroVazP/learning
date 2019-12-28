@@ -3,6 +3,17 @@ import csv
 #doesnt work in notepad + (maybe ot admin mode, check) 
 
 with open('tcsv.csv', 'a', newline='') as f:
+
+    filewriter = csv.writer(f, delimiter=',',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+
+
+    filewriter.writerow(['Name', 'Profession'])
+    filewriter.writerow(['Derek', 'Software Developer'])
+    filewriter.writerow(['Steve', 'Software Developer'])
+    filewriter.writerow(['Paul', 'Manager'])
+
+    """
     w = csv.writer(f)
     
     y =("1st c","2nd c","3nd c")    
@@ -19,7 +30,7 @@ with open('tcsv.csv', 'a', newline='') as f:
         #x = 1    
         #for x<10:
         #x = x+1 
-    
+    """
     
 #https://realpython.com/python-csv/#writing-csv-files-with-csv 
 
