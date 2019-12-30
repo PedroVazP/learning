@@ -1,0 +1,15 @@
+https://www.geeksforgeeks.org/data-visualization-different-charts-python/
+https://plot.ly/python/
+
+https://towardsdatascience.com/plotting-with-python-c2561b8c0f1f#93e3
+using panda
+
+https://towardsdatascience.com/python-plotting-basics-simple-charts-with-matplotlib-seaborn-and-plotly-e36346952a3a
+
+https://grafana.com/docs/grafana/latest/guides/getting_started/
+
+import plotly
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import plotly.express as px
