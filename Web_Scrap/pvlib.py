@@ -10,32 +10,33 @@ class pvlib:
     #include self, arguments then
     #investigate instance. is this what self does?
     #https://docs.python.org/3/tutorial/classes.html
-
     
     def hello():
         print ("Hello world")
         return ("Hello world")    
-    
+       
     def store(string):
+        fileN = "output.txt"
         str(string)
-        file = "output.txt"
-        f = open(file,"a+")
-        f.write ("\n")
+        #str(filename)
+        f = open(fileN,"a+")        
         ts1 =('Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()))
-        #ts2 =('Timestamp: {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now()))
-        #ts3 =('Date now: %s' % datetime.datetime.now())
-        #ts4 =('Date today: %s' % datetime.date.today())
+            #ts2 =('Timestamp: {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now()))
+            #ts3 =('Date now: %s' % datetime.datetime.now())
+            #ts4 =('Date today: %s' % datetime.date.today())
         f.write(ts1)
         f.write ("\t")
         f.write (string)
+        f.write ("\n")
         f.close()
         print (f)
+        print (string)
 
         # How to test? : try pvlib.store("prueba"),
         # How to break?, file did hundred "prueba"
 
-    if __name__ == "__main__":
-        store("")
+    #if __name__ == "__main__":
+     #store("")
 
 """To add: Pending to create an error check. Write vs create new.
             if file = error

@@ -19,3 +19,11 @@
     #Alternative https://www.datadriveninvestor.com/2019/02/25/6-alternatives-to-the-yahoo-finance-api/
         #https://www.alphavantage.co/
         #https://www.alphavantage.co/documentation/
+
+#weather
+    #https://openweathermap.org/appid
+
+#https://developer.accuweather.com/accuweather-current-conditions-api/apis
+
+http://dataservice.accuweather.com/currentconditions/v1/{locationKey}
+

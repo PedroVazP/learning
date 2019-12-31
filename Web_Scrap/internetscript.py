@@ -7,6 +7,7 @@ import urllib
 import re
 import pandas as pd
 import numpy as np
+from pvlib import pvlib
 
 pd.set_option('max_colwidth', 5000)
 pd.options.display.max_rows = 999
@@ -14,8 +15,11 @@ pd.options.display.max_rows = 999
 driver = webdriver.Firefox()
     # Open : Instead of webdriver selenium I may use an API in the future
 
-place = ['orenco']
+place = ['hillsboro']
+#place = ['beaverton']
 price = '2000'
+
+print ("Break 1")
 craig_title = []
     #This creates a list
 
@@ -25,6 +29,8 @@ url = "https://portland.craigslist.org/search/roo?query="+str(place)+"&sort=date
 
 driver.get(url)
 all_posts = driver.find_elements_by_class_name("result-row")
+
+print ("Break 2")
 
 for post in all_posts:
     craig_title.append(post.text)
@@ -40,17 +46,19 @@ soup = BeautifulSoup(html_page, "lxml")
 
 #file = "output.txt"
 #f= open(file,"a+")
-""" Pending to create an error check. Write vs create new.
-        if file = error
-        f= open(file,e"w+")
-    """
-    
-for element in soup.findAll("a", {"class": "result-title hdrlnk"}):
+        
+for element in soup.findAll("link", {"class": "result-title hdrlnk"}):
     print (element['href'])
-    pvlib.store(f.write("%s \r\n" % element))
+    print ("Break 3")
+    pvlib.store("{}   xx xx".format(element))
+    #pvlib.store("{} \r\n".format(element))
     #Pending to create a function instead of this.
 
     #for function function.name (args).
         #inside function. Parameters, Logic, Return.
+    #file.close()
 
-f.close()
+""" Pending to create an error check. Write vs create new.
+        if file = error
+        f= open(file,e"w+")
+    """

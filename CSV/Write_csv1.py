@@ -7,18 +7,20 @@ with open('tcsv.csv', 'a', newline='') as f:
     filewriter = csv.writer(f, delimiter=',',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
+    filewriter.writerow(["x", "y"])
     
-    x = 0    
-    for x in range (1, 10): #https://wiki.python.org/moin/ForLoop
-    #while x < 10: #https://wiki.python.org/moin/WhileLoop
+    x = 0
+    y = 1
+    #for x in range (1, 10): #https://wiki.python.org/moin/ForLoop
+    while ( (x < 10) and ( y< 10)) : #https://wiki.python.org/moin/WhileLoop
         x = x+1
-        filewriter.writerow(['1st Column', x])
+        y = y+1
+        filewriter.writerow([x, y])
+        print (x , y)
 
-    string = "Hello World"
-    for y in string:
-        filewriter.writerow(['1st Column', y])
-    
-    """
+       
+"""
+Some documentation
 #https://realpython.com/python-csv/#writing-csv-files-with-csv 
 #https://pythonspot.com/files-spreadsheets-csv/
 #https://stackoverflow.com/questions/33054527/typeerror-a-bytes-like-object-is-required-not-str-when-writing-to-a-file-in
@@ -48,6 +50,12 @@ OTHER EXAMPLE
     print ("{} is the var".format(y)) 
     print ("{} is the file".format(f)) 
 
+3.
+    string = "Hello World"
+    for y in string:
+        filewriter.writerow(['1st C', y])
 
+    it will take each character in word and type it down.
+    
 """
 
