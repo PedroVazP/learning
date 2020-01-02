@@ -1,0 +1,7 @@
+documentation
+httpsdocs.continuum.ioanaconda
+
+training links
+https://www.datacamp.com/community/tutorials/installing-anaconda-windows
+
+
